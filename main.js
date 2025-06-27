@@ -29,7 +29,7 @@ function check(x) {
     fetch(q)
     .then((response) => response.blob())
     .then((f) => {
-        b = f.split("\n");
+        b = f.text().split("\n");
         console.log(b);
         for (var i = 0; i < b.length; i++) {
             if (b[i].startsWith("GENERATOR=")) {
